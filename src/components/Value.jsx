@@ -1,4 +1,4 @@
-const Value = () => {
+const Value = (props) => {
   return (
     <section>
       <div>
@@ -9,12 +9,20 @@ const Value = () => {
           teams.
         </p>
       </div>
+
       <div>
-        <div>
-          <div>01</div>
-          <h3></h3>
-        </div>
-        <p></p>
+        {props.data.map((item) => (
+          <div key={item.id}>
+            <span className=" w-12 bg-BrightRed text-VeryPaleRed text-center">
+              {item.id}
+            </span>
+            <div>
+              <h3>{item.header}</h3>
+            </div>
+
+            <p>{item.context}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
