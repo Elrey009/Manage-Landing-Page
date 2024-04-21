@@ -1,11 +1,5 @@
-import React from 'react'
+const Testimonial = () => {
+  return <div></div>;
+};
 
-const Wts = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default Wts
+export default Testimonial;

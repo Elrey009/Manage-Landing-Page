@@ -13,7 +13,7 @@ const Footer = () => {
         <input
           type="text"
           placeholder="Updates in your inbox"
-          className="w-[15rem] py-2 text-center rounded-3xl "
+          className="w-[15rem] py-2 pl-5 rounded-3xl focus:outline-none focus:border-transparent text-black "
         />
         <div className="bg-BrightRed w-[5rem] py-[0.5rem] rounded-[1.5rem] text-center font-semibold  lg:hover:text-BrightRed lg:hover:bg-VeryPaleRed text-VaryLightGray cursor-pointer">
           Go
@@ -42,7 +42,9 @@ const Footer = () => {
             <li className="lg:hover:text-BrightRed cursor-pointer">Careers</li>
           </Link>
           <Link to="#">
-            <li className="lg:hover:text-BrightRed cursor-pointer">Community</li>
+            <li className="lg:hover:text-BrightRed cursor-pointer">
+              Community
+            </li>
           </Link>
           <Link to="#">
             <li className="lg:hover:text-BrightRed cursor-pointer">
