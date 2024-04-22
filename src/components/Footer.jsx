@@ -102,7 +102,7 @@ const Footer = () => {
         />
       </div>
 
-      <p className="py-5 md:top-[6.5rem] md:absolute md:right-[10rem]">
+      <p className="py-5 md:top-[6.5rem] md:absolute md:right-[10rem] opacity-[0.5]">
         Copyright 2020.All rights Reserved
       </p>
     </footer>
