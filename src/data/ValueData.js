@@ -9,7 +9,7 @@ const data = [
     id: "02",
     header: "Advanced built-in reports",
     context:
-      "Set internal delivery estimates and tracks progress toward company goals. Our customisable helps you build out the reports you need to keep the stakeholders informed.",
+      "Set internal delivery estimates and track progress toward company goals. Our customisable helps you build out the reports you need to keep the stakeholders informed.",
   },
   {
     id: "03",
