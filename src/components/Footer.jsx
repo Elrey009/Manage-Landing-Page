@@ -9,17 +9,17 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className=" relative bg-VeryDarkBlue  md:flex-row flex flex-col text-VaryLightGray justify-center items-center pt-8">
-      <div className=" md:top-12 md:absolute md:right-[10rem] flex gap-2">
+      <div className=" md:top-10  md:right-[2rem] lg:top-12 md:absolute lg:right-[10rem] flex gap-2">
         <input
           type="text"
           placeholder="Updates in your inbox"
           className="w-[15rem] py-2 pl-5 rounded-3xl focus:outline-none focus:border-transparent text-black "
         />
-        <div className="bg-BrightRed w-[5rem] py-[0.5rem] rounded-[1.5rem] text-center font-semibold  lg:hover:text-BrightRed lg:hover:bg-VeryPaleRed text-VaryLightGray cursor-pointer">
+        <div className="bg-BrightRed w-[5rem] py-[0.5rem] rounded-[1.5rem] text-center font-semibold   lg:hover:opacity-[0.7] text-VaryLightGray cursor-pointer">
           Go
         </div>
       </div>
-      <nav className="flex gap-24 text-VaryLightGray py-8 md:gap-36 md:mr-28 md:mb-4">
+      <nav className="flex gap-24 text-VaryLightGray py-8 lg:gap-36 lg:mr-28 md:gap-20 md:mr-24 md:mb-4">
         <ul>
           <Link to="#">
             <li className="lg:hover:text-BrightRed cursor-pointer">Home</li>
@@ -54,7 +54,7 @@ const Footer = () => {
         </ul>
       </nav>
 
-      <div className=" flex flex-col md:absolute md:left-28 md:flex-col-reverse ">
+      <div className=" flex flex-col md:absolute md:left-8 lg:left-28 md:flex-col-reverse ">
         <div className="flex gap-[2.5rem] md:gap-[0.5rem] mb-7">
           <Link to="#" key="facebook">
             <img
@@ -102,7 +102,7 @@ const Footer = () => {
         />
       </div>
 
-      <p className="py-5 md:top-[6.5rem] md:absolute md:right-[10rem] opacity-[0.5]">
+      <p className="py-5 md:top-[6.5rem] md:absolute lg:right-[10rem] md:right-[5rem] opacity-[0.5]">
         Copyright 2020.All rights Reserved
       </p>
     </footer>

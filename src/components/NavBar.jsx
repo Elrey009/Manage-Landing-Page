@@ -1,19 +1,52 @@
-import hambuger from "../assets/images/icon-hamburger.svg";
-import close from "../assets/images/icon-close.svg";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import hambugerIcon from "../assets/images/icon-hamburger.svg";
+import closeIcon from "../assets/images/icon-close.svg";
 
 const NavBar = () => {
+  const [isHidden, setIsHidden] = useState(false);
+
+  function toggleIsHidden() {
+    setIsHidden(!isHidden);
+  }
   return (
     <div>
-      <nav className=" bg-white w-[30rem] hidde shadow-md text-DarkBlue absolute left-0 top-16 h-[20rem] z-10  md:hidde lg:w-0 lg:top-0 lg:left-[13rem]  ">
-        <ul className=" flex flex-col px-[9rem] py-[2rem] text-[18px] font-semibold leading-[3] md:px-[11rem]  lg:flex-row lg:gap-10 ">
-          <li className="cursor-pointer">Pricing</li>
-          <li className="cursor-pointer">Product</li>
-          <li className="cursor-pointer">About Us</li>
-          <li className="cursor-pointer">Careers</li>
-          <li className="cursor-pointer">Community</li>
+      <nav
+        className={`${
+          isHidden ? "" : "hidden"
+        }  bg-white w-[30rem]  shadow-md text-DarkBlue absolute left-0 top-16 h-[20rem] z-10 md:left-8 md: hover:text-DarkGrayishBluew-[50rem] md:top-16  lg:block lg:w-0 lg:top-0 lg:left-[13rem]`}
+      >
+        <ul className=" flex flex-col px-[9rem] py-[2rem]  md:text-center text-[18px] font-semibold leading-[3] md:px-[11rem]  lg:flex-row lg:gap-10 ">
+          <Link to={"#"}>
+            {" "}
+            <li className="cursor-pointer hover:text-DarkGrayishBlue">Pricing</li>
+          </Link>
+
+          <Link to={"#"}>
+            <li className="cursor-pointer hover:text-DarkGrayishBlue">Product</li>
+          </Link>
+
+          <Link to={"#"}>
+            {" "}
+            <li className="cursor-pointer hover:text-DarkGrayishBlue">About Us</li>
+          </Link>
+
+          <Link to={"#"}>
+            <li className="cursor-pointer hover:text-DarkGrayishBlue">Careers</li>
+          </Link>
+
+          <Link to={"#"}>
+            {" "}
+            <li className="cursor-pointer hover:text-DarkGrayishBlue">Community</li>
+          </Link>
         </ul>
       </nav>
-      <img src={hambuger} className=" cursor-pointer lg:hidden" />
+      <button onClick={toggleIsHidden}>
+        <img
+          src={isHidden ? closeIcon : hambugerIcon}
+          className=" cursor-pointer lg:hidden"
+        />
+      </button>
     </div>
   );
 };
