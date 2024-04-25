@@ -18,7 +18,7 @@ import Button from "./Button";
 import { useState, useEffect } from "react";
 
 const Testimonial = () => {
-  const [revPerPage, setRevPerPage] = useState(false);
+  const [revPerPage, setRevPerPage] = useState(1);
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,7 +48,7 @@ const Testimonial = () => {
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth > 0 && window.innerWidth < 780) {
+    if (window.innerWidth > 0 && window.innerWidth < 700) {
       setRevPerPage(1);
     } else if (window.innerWidth > 700 && window.innerWidth < 1000) {
       setRevPerPage(2);
@@ -63,13 +63,14 @@ const Testimonial = () => {
       </h2>
       <Swiper
         className=" w-full mySwiper"
-        spaceBetween={revPerPage === 3 ? 50 : 0}
+        spaceBetween={revPerPage === 3 ? 50 : 20}
+        gap={revPerPage === 3 ? 50 : 20}
         slidesPerView={revPerPage}
         // virtual
         modules={[Navigation, Pagination, A11y, Virtual, Autoplay]}
         // navigation
         autoplay={{
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
@@ -79,14 +80,14 @@ const Testimonial = () => {
           console.log(item);
           return (
             <SwiperSlide key={item.name} className=" swiper-slide border-none">
-              <div className=" w-[24rem] h-[14rem] flex mx-6 bg-VaryLightGray  flex-col justify-center  items-center relative mt-9 lg:w-[30rem] ">
+              <div className=" w-[24.5rem] h-[14rem] flex mx-4 bg-VaryLightGray  flex-col justify-center  items-center relative mt-9 lg:w-[30rem] ">
                 <img
                   src={item.img}
                   alt={item.name}
                   className="w-12 absolute -top-[1.5rem] pb-6"
                 />
                 <h4 className="font-bold ">{item.name}</h4>
-                <p className=" text-center px-[2.9rem] text-DarkGrayishBlue ">
+                <p className=" text-center px-[3rem] text-DarkGrayishBlue ">
                   {item.content}
                 </p>
               </div>
